@@ -46,3 +46,12 @@ Cette première version repose sur une automatisation par règles, sans intégra
 **Prochaines évolutions envisagées :** traitement de plusieurs dossiers, intégration d'une analyse assistée par IA et ajout de contrôles avec validation humaine.
 
 *Le code et les configurations internes du workflow sont conservés dans un environnement privé.*
+
+## Architecture fonctionnelle
+
+```mermaid
+flowchart TD
+    A[Réception d'un dossier fictif] --> B{Montant assuré supérieur à 40 000 EUR ?}
+    B -->|Oui| C[Vérification supplémentaire requise]
+    B -->|Non| D[Traitement standard]
+```
